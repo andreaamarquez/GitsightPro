@@ -1,0 +1,69 @@
+body {
+  width: 100%;
+  height: 100%;
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/static/fondo-1-bg.png');
+  background-position: center top;
+}
+
+#gitsight-pro-title {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: bold;
+  font-family: Poppins, 'Source Sans Pro';
+}
+
+.login-container {
+  width: 30%; 
+  position: fixed;
+  bottom: 15%;
+  right: 10%;
+  padding: 20px;
+  text-align: center;
+  background-color: rgba(99, 94, 94, 0.85);
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  color: #ffffff;
+  font-size: 20px;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  text-align: left;
+}
+
+.sign-in-section h2 {
+  color: #ffffff;
+  font-size: 32px;
+  text-align: left;
+}
+
+.github-sign-in {
+  margin-top: 20px; 
+  padding: 15px 30px;
+  font-size: 18px;
+  background-color: #afc8d7;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease;
+}
+
+.github-sign-in img {
+  width: 20px; 
+  margin-right: 10px;
+}
+
+.github-sign-in:hover {
+  background-color: #3e464b;
+}

@@ -1,0 +1,100 @@
+body {
+    background-color: #ffffff; /* Color de fondo gris claro */
+    font-family: 'Montserrat', sans-serif; /* Fuente del texto */
+    margin: 0; /* Elimina el margen predeterminado */
+    padding: 0; /* Elimina el relleno predeterminado */
+}
+
+.menu {
+    display: flex; /* Establece el contenedor como un flexbox */
+    justify-content: space-around; /* Distribuye los elementos horizontalmente */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+/* Estilos para los elementos del menú */
+.menu div {
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #AA55FF; /* Establece el color del texto */
+    padding: 10px; /* Añade espacio alrededor del texto */
+}
+
+.c1 {
+    display: flex; /* Establece el contenedor como un flexbox */
+    justify-content: space-between; /* Distribuye los elementos horizontalmente con espacio entre ellos */
+    align-items: center; /* Centra los elementos verticalmente */
+}
+
+.tool{
+    margin-right: 10%;
+    margin-top: 3%;
+}
+
+.pagina {
+    /*position: fixed;*/
+    width: calc(100% - (8% + 3%)); /* Ancho = 100% - (margen izquierdo + margen derecho) */
+    height: calc(100% - (3% + 3%)); /* Altura = 100% - (margen superior + margen inferior) */
+    margin: 3% 3% 3% 8%; /* Margen: arriba derecha abajo izquierda */
+    background-color: #F6F6F6; /* Color de fondo */
+}
+.c2 {
+    width: calc(75% - 8% - 3%); /* Ancho = 100% - margen izquierdo - margen derecho */
+    height: calc(100% - 3% - 3%); /* Altura = 100% - margen superior - margen inferior */
+    margin: 5% 3% 0% 8%; /* Margen: arriba derecha abajo izquierda */
+    background-color: #AA55FF; /* Color de fondo */
+}
+
+.ve {
+    position: absolute; /* Fija la posición del div */
+    top: 50%; /* Lo posiciona en el centro vertical */
+    left: 3%; /* Lo posiciona al principio del margen izquierdo */
+    transform: translate(-50%, -50%) rotate(-90deg); /* Rotación y centrado */
+}
+
+.cimg {
+    position: absolute;
+    margin-left: 50%;
+    margin-top: 10%;
+   
+}
+
+.image {
+    position: absolute;
+}
+
+.signin {
+    font-weight: bold; /* Hace que el texto sea negrita */
+    color: #AA55FF; /* Establece el color del texto */
+    padding: 10px; /* Añade espacio alrededor del texto */
+  }
+
+  .mid {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    margin: 10% auto;
+    padding: 20px;
+    border: 2px solid #AA55FF;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.btnGit {
+    filter: invert(100%);
+    width: 40px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.btn button {
+    border: none;
+    background: #AA55FF;
+    font-weight: bold;
+    color: #ffffff;
+    font-size: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+

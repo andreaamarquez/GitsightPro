@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="/static/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Repository Info</title>
+    <link rel="stylesheet" type="text/css" href="/static/repo-info.css"/>
+</head>
+<body>
+    <div id="gitsight-pro-title">GITSIGHT PRO</div>
+    <div id="repo-info-container">
+        <h2>Repository Information</h2>
+        <form id="repo-info-form" action="/success" method="post">
+            <label for="repo-url">Repository URL</label>
+            <input type="text" id="repo-url" name="repo_url" placeholder="Enter the repository URL" maxlength="150" required>
+            <input type="hidden" name="new_analysis" value="{{ new_analysis }}">
+            <button type="submit">Next</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script>
+        // Validar la URL del repositorio al enviar el formulario
+        $(document).ready(function() {
+            $("#repo-info-form").submit(function(event) {
+                var repoUrlInput = $("#repo-url");
+                var repoUrl = repoUrlInput.val();
+
+                // Validar el formato de la URL
+                var urlPattern = new RegExp(/^https:\/\/github\.com\/[a-zA-Z0-9_-]+\/[a-zA-Z0-9_-]+\.git$/);
+
+                if (!urlPattern.test(repoUrl)) {
+                    alert('El formato de la URL no es válido');
+                    event.preventDefault(); // Evitar que se envíe el formulario
+                }
+            });
+        });
+    </script>
+</body>
+</html>

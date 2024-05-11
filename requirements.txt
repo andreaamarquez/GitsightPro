@@ -1,0 +1,14 @@
+psycopg2==2.9.5
+pydantic==1.7.3
+uvicorn==0.12.3
+databases==0.8.0
+fastapi==0.62.0
+SQLAlchemy==1.4.49
+httpx
+aiofiles
+jinja2==3.0.3
+python-multipart==0.0.6
+requests
+pandas
+
+#pydantic== v1.10.0a1

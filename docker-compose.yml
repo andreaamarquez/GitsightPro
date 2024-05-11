@@ -1,0 +1,26 @@
+version: '3'
+services:
+    # postgres-datamining:
+    #     image: postgres:16.2-bookworm
+    #     restart: always
+    #     # set shared memory limit when using docker-compose
+    #     shm_size: 128mb
+    #     volumes:
+    #         # The volume for postgres data
+    #         - ./postgres-data/:/var/lib/postgresql/data
+    #     environment:
+    #         POSTGRES_DB: datamining_db
+    #         POSTGRES_USER: postgres
+    #         POSTGRES_PASSWORD: 1234
+    data-mining-service:
+        build:
+            context: .
+        container_name: data-mining-container
+        ports:
+            - 3000:3000
+            - 8000:8000
+            - 5432:5432
+        volumes:
+            - .:/workspace:cached
+            # this speeds up things so much, we avoid mounting our own node_modules, so as to use the container's file system!
+        command: /bin/bash -c "cd /workspace && source /venv/bin/activate && /etc/init.d/postgresql start && chmod +x ./start_server.sh && ./start_server.sh && while true; do sleep 3600; done"
